@@ -1,2 +1,2 @@
-# Let-s-go-with-golang
+# golang
 Learning golang
