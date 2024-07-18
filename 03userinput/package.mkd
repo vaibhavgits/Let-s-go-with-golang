@@ -1,0 +1,10 @@
+# Input
+
+- You can search for any package on pkg.go.dev
+
+
+### Packages
+
+- bufio - This package is used for taking input.
+- os - This package is used to deal with programming related to reading and writing files.
+

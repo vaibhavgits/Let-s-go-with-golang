@@ -1,0 +1,8 @@
+# comma OK
+
+- There’s no Try Catch block in Go.
+- It’s used in 4 different scenarios:
+  - Test for error on a function return
+  - Testing if a key-value item exists in a Go map
+  - Testing if an interface variable is of a certain type
+  - Testing if a channel is closed
