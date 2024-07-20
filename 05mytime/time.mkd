@@ -1,0 +1,26 @@
+# Time
+
+
+### Formatting Time
+
+
+- In Go, the layout string for formatting and parsing dates and times must follow a specific pattern based on a reference date, **Mon Jan _2 15:04:05 MST 2006**
+
+- In Go, time formatting is done using a specific layout string. The string "Mon Jan _2 15:04:05 MST 2006" is a layout that represents a specific date and time format in Go, with no fractional seconds.
+
+
+
+- If you want to modify the present time in human-readble or simple form, you must have to write the following:-s
+
+    fmt.Println(presentTime.Format("01-02-2006 15:04:05 MST Mon"))
+
+
+- What if we change the the string "Mon Jan _2 15:04:05 MST 2006"  to random date or time say "Wed Jan _5 17:19:05 IST 2023"
+
+    This code will produce an error because the layout string does not follow the reference date pattern.
+
+
+
+### Date
+
+- In date, month is written in the form of time.\<name of month\>. e.g. time.November

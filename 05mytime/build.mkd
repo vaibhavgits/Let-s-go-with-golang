@@ -1,0 +1,8 @@
+# Build
+
+- You can build executables for Linux, Windows and Mac using golang. The command is - **go build**
+- Go searches "GOOS" environment variable, suppose GOOS="darwin", then it will build executables for Mac. 
+
+    Note - "darwin" is used for Mac.
+
+- If you want to build executables for linux, you can run command - **GOOS="linux" go build**
