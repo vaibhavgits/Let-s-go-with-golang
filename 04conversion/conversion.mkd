@@ -1,0 +1,27 @@
+# Conversion
+
+### strconv
+
+- This package is used for conversion of to and from string. 
+
+
+### common error in goland
+
+- You can't use input like this:- 
+
+    numRating, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
+
+    Suppose, you entered 4. This will output and error saying:- 
+    strconv.ParseFloat:  parsing "4\n":  invalid syntax
+
+    You can see that "\n" is added automatically after the rating 4 is entered. 
+
+- To avoid this error, strings package is used strings.TrimSpace() method is used.
+    
+    Example:
+
+    numRating, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
+
+    TrimSpace returns a slice of the string s, with all leading and trailing white space removed
+
+    
