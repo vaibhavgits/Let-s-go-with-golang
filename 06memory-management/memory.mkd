@@ -1,0 +1,43 @@
+# Memory Management
+
+- As programs run they write objects to memory. At some point these objects should be removed when they’re not needed anymore. This process is called memory management.
+- Memory allocation and Deallocation happens automatically
+
+
+### new() vs make()
+
+#### new()
+
+- Allocates Memory: When you use new(), you reserve space in memory for a variable.
+- Does Not Initialize: The reserved space is filled with zero values (default values) for the type, but you haven’t set it to any specific value.
+
+- Example
+  - Imagine you are reserving a parking spot:
+    - Reserve the spot: p := new(int) (You have a parking spot reserved for an integer).
+    - Spot is empty: The spot is reserved, but no car is parked in it yet (it's just an empty spot).
+    - Zeroed Storage: The spot is ready to hold a car (it’s clean and empty).
+  
+
+#### make()
+  
+- Allocates Memory: When you use make(), you reserve space in memory for a specific type of data structure (slices, maps, or channels).
+- Initializes it: The reserved space is also prepared with an initial setup (like setting up a parking lot with specific spots for cars).
+
+- Example of make()
+    - Imagine you are setting up a parking lot:
+      - Reserve and set up spots: s := make([]int, 10) (You have a parking lot with 10 spots for integers).
+      - Each spot is ready: Each spot is reserved and ready to park cars in it (it’s clean and set up to hold cars).
+
+
+
+### What does this mean -  "You can allocate memory but not initialize it"?
+
+- Think of allocating memory as reserving a space in your computer’s memory (like reserving a parking spot). When you allocate memory, you’re saying, "I need this much space for my data."
+
+- Initializing memory means putting actual values into the reserved space (like parking a car in the reserved spot). When you initialize memory, you’re saying, "Here’s the data that will fill this space."
+new() Function in Go
+
+
+### GOGC Variable
+
+The GOGC variable sets the initial garbage collection target percentage. A collection is triggered when the ratio of freshly allocated data to live data remaining after the previous collection reaches this percentage. The default is GOGC=100. Setting GOGC=off disables the garbage collector entirely. 
