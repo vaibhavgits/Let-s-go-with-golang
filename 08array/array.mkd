@@ -1,0 +1,5 @@
+# Array
+
+### len()
+
+hen you declare an array with a specific size, the length of the array is fixed and does not depend on the number of values you initially provide. The len() function will always return the size of the array as declared.
