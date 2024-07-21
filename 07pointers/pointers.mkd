@@ -1,0 +1,30 @@
+# Pointers
+
+- A pointer is a variable that stores the memory address of another variable. 
+- When you want to pass on actual value to avoid copying of a varible, use pointer.  
+
+### Why Use Pointers?
+Pointers are useful because they allow you to:
+
+- Directly modify a variable: By pointing to a variable's address, you can change its value directly.
+- Pass large structures efficiently: Passing a pointer is more efficient than passing large data structures because you only pass the address rather than copying the entire structure.
+
+### Key Points
+- Example
+  - var a int = 42
+  - var p *int = &a
+- Pointer Declaration: var p *int means p is a pointer to an int OR p will be storing an integer value.
+- Getting Address: &a gets the memory address of a.
+- **& means referencing.**
+- Dereferencing: *p accesses the value at the address p
+- Default value of a pointer is **<nil>**
+
+
+### So pointer refers to an address of another variable or it refers to the value of a variable accessing by its address?
+
+- A pointer itself refers to the address of another variable, but you can use that address to access or modify the value stored at that address.
+- When you create a pointer, it holds the memory address of another variable.
+- To access or modify the value at the address the pointer is pointing to, you dereference the pointer using the * operator.
+- Summary
+  - Pointer: Refers to the address of a variable.
+  - Dereferencing: Accesses or modifies the value at that address.
