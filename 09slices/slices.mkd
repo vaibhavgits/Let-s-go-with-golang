@@ -1,0 +1,40 @@
+# Slices
+
+- A slice is a dynamically-sized. Unlike arrays, slices can grow and shrink, making them more versatile.
+
+### Range
+
+- Range are not inclusive in golang.
+- Example fruitList[1:3], This will append the fruitList elements from 1st position(index 1) to 2nd position( index 2).
+
+### Creating Slices
+You can create slices in several ways:
+
+- From an Array:
+
+  - var arr = [5]int{1, 2, 3, 4, 5}
+  - var slice []int = arr[1:4] // Creates a slice from elements 1 to 3 (index 1 to 3, not including 4)
+  - fmt.Println(slice) // Output: [2 3 4]
+
+
+- Using make:
+
+  - slice := make([]int, 3) // Creates a slice of length 3, initialized with zero values
+  - fmt.Println(slice) // Output: [0 0 0]
+  - If you want to add more items, you can use append() method. **If you use slice[4]=431, it will raise an error!**
+
+
+- Slice Literals:
+
+  - slice := []int{1, 2, 3} // Creates a slice with initial values
+  - fmt.Println(slice) // Output: [1 2 3]
+
+
+### Length and Capacity
+- Length (len): Number of elements in the slice.
+- Capacity (cap): Number of elements in the underlying array, starting from the first element in the slice.
+
+
+
+### Append Method
+- This method is used for adding elements to the slices and can also be used in removing an element
