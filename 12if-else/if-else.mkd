@@ -1,0 +1,4 @@
+# if-else
+
+- The open curly braces for "if" must be present in the same line where if has been written other wise it will generate an error - syntax error: unexpected newline, expected { after if clause
+- 

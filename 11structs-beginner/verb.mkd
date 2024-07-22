@@ -1,0 +1,20 @@
+# verb
+
+![verb](image.png)
+
+### %v
+
+- The %v verb is the default format specifier. It prints the value in a default format that is appropriate for the type of the value. For basic types, this might look like the value itself (e.g., 123 for integers, true for booleans).
+- Example\
+  hitesh := User{"Hitesh", "hitesh@go.dev", true, 16}\
+  Using %v, the print output will be:-\
+  {Hitesh hitesh@go.dev true 16}
+
+### %+v
+- The %+v verb is an enhanced version of %v. When used with structs, it includes the field names along with their values, providing more context and making the output more readable.
+- Example\
+  hitesh := User{"Hitesh", "hitesh@go.dev", true, 16}\
+  Using %v, the print output will be:-\
+  {Name:Hitesh Email:hitesh@go.dev Status:true Age:16}
+
+**For basic types, %v and %+v produce the same output.**

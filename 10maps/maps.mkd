@@ -1,0 +1,8 @@
+# maps
+
+- Example
+- student := make(map[int]string)
+- In above example, key is an integer and value is a string.
+
+- If you print the map using fmt.Println(), The map will display the elements without comma separated key:value pairs like this :-
+- map[PY: Python RB:Ruby]

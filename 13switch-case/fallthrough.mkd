@@ -1,0 +1,13 @@
+# fallthrough
+
+- fallthrough statement is used within a switch statement to force the execution of the subsequent case block, regardless of whether the condition for that subsequent case is met.
+- This is similar to the behavior in languages like C and Java, where case blocks "fall through" to the next case if not terminated with a break statement. However, in Go, fallthrough must be explicitly stated.
+- ![fallthrough](image.png)\
+  When it matches case 2, it prints "Two".
+The fallthrough statement is then encountered, which forces the execution of the next case (case 3), even though num is not 3.
+Therefore, "Three" is also printed.
+
+### Important Points
+- Single Fallthrough: You can only use fallthrough to move to the very next case. You cannot use it to jump multiple cases or backtrack.
+- No Condition Checking: When fallthrough is executed, Go does not check the condition of the next case. It simply runs the code block of the next case.
+- Must be the Last Statement: fallthrough must be the last statement in a case block. You cannot have code after fallthrough in the same case block.

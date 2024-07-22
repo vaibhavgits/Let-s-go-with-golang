@@ -1,0 +1,18 @@
+# Underscore - The blank identifier
+
+
+1. Ignoring Values
+When you want to ignore certain values in a multiple assignment, you can use _ as a placeholder to discard them. This is useful when you only care about some of the returned values from a function.\
+![Ignoring Values](image.png)
+2. Importing Packages for Side Effects
+Sometimes you might want to import a package solely for its side effects (like initialization), without directly using any of its exported identifiers. In such cases, you can use _ to import the package.\
+![Importing Packages](image-1.png)
+3. Ignoring Unused Variables
+In Go, declaring a variable without using it will result in a compile-time error. To avoid this, you can assign the variable to _ if you don’t plan to use it.\
+![Ignoring unused variables](image-2.png)
+4. Placeholder for Unused Imports
+If you import a package but don’t use it, Go will give a compile-time error. You can use _ to import it and indicate that you’re aware it’s unused.\
+![Placeholder](image-3.png)
+5. Ignoring Function Return Values
+When calling a function, if you don’t need all of its return values, you can use _ to ignore the ones you don’t need.\
+![retrun function](image-4.png)
