@@ -22,7 +22,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 3. Isolation: Allows you to work with multiple projects with different dependency versions without conflicts.
 4. This file is more structured and includes not only the list of dependencies but also metadata about the module, such as the module path and the version of Go being used. It looks like this:
    
-    ![go mod 1](image.png)
+    ![go mod 1](/01hello/image.png)
 
 5. It maintains a go.sum file alongside go.mod to ensure exact versions and integrity of the dependencies.
 6. You can automatically update and clean up dependencies using commands like go get and go mod tidy.
@@ -36,7 +36,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 - If someone else clones your project and runs go build, go test, or go mod tidy, Go will check the go.sum file to ensure the integrity of the dependencies being downloaded.
 - Example of go.sum file - 
   
-  ![go.sum](image-1.png)
+  ![go.sum](/01hello/image-1.png)
 - Each line contains:
     - The module path and version.
     - A hash type (h1) and the checksum.
@@ -50,7 +50,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 - GOPATH is an environment variable that specifies the location of your workspace, where your Go code, dependencies, and binaries are stored.
 - Example Structure
   
-  ![GOPATH Structure](image-2.png)
+  ![GOPATH Structure](/01hello/image-2.png)
   
     src:
     - Contains the source code of Go projects.
@@ -73,7 +73,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 - Each project can have its own set of dependencies, versions, and configurations, independent of other projects.
 - Example Structure
   
-  ![Go Module Structure](image-3.png)
+  ![Go Module Structure](/01hello/image-3.png)
 
 - GOPATH still serves as a default module cache location and supports backward compatibility, but its role in Go development has been greatly minimized. 
 
@@ -87,7 +87,7 @@ Imagine you're reading a book. As you read, you naturally break down the text in
 - After the lexer breaks the code into tokens, it passes these tokens to the next stage called the parser. The parser then uses these tokens to understand the structure of the code and to check if it follows the language's grammar rules.
 - Example
   
-  ![Lexer Example](image-4.png)
+  ![Lexer Example](/01hello/image-4.png)
 
   When a lexer processes this code, it breaks it down into tokens like:
 
@@ -119,11 +119,11 @@ If a line ends with a token that could legally end a statement (such as an ident
 
 - Multiple Statements on One Line: If you want to place multiple statements on a single line, you need to separate them with semicolons.
 
-![Multi line statment](image-5.png)
+![Multi line statment](/01hello/image-5.png)
   
 - For Loop Initialization and Post Statements: In for loops, semicolons are required to separate the initialization, condition, and post statements.
   
-![For Loop](image-6.png)
+![For Loop](/01hello/image-6.png)
 
 # Variable
 
