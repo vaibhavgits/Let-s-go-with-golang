@@ -3,7 +3,7 @@
 
 ![golang](https://github.com/user-attachments/assets/adf44975-31ab-472e-b1aa-cf11366388b2)
 
-# Golang - Introduction
+## Introduction
 
 Golang, also known as Go, is an open-source programming language created by Google.
 
@@ -13,7 +13,7 @@ Golang, also known as Go, is an open-source programming language created by Goog
 - Compiled Lang - Go is a compiled language. This means that Go source code is translated into machine code by a compiler before it is executed.
 - Statically typed - Go is a statically typed language. This means that the type of a variable is known at compile time, and type checking is performed during compilation. In contrast, dynamically typed languages perform type checking at runtime.
 
-# go mod init
+## go mod init
 
 The go.mod file in Go serves a similar purpose to the requirements.txt file in Python, but there are some differences in how they work and what they contain.
 
@@ -29,7 +29,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 7. Example - go mod init example.com/greetings
    
 
-# go.sum
+## go.sum
 
 - The go.sum file in Go is used alongside the go.mod file to ensure the integrity and reproducibility of your project's dependencies.
 - When you first add a dependency (e.g., by running go get), Go records the version of the module in the go.mod file and the checksum of that version in the go.sum file.
@@ -42,8 +42,6 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
     - A hash type (h1) and the checksum.
 - You don’t need to manually edit the go.sum file.It’s automatically generated and updated by Go commands like go mod tidy, go get, go build, and go test.
   
-
-# GOPATH & Go Modules
 
 ## GOPATH
 
@@ -78,7 +76,7 @@ The go.mod file in Go serves a similar purpose to the requirements.txt file in P
 - GOPATH still serves as a default module cache location and supports backward compatibility, but its role in Go development has been greatly minimized. 
 
 
-# Lexer
+## Lexer
 
 Imagine you're reading a book. As you read, you naturally break down the text into words and sentences. You recognize where one word ends and another begins, and you understand the structure of the sentences. A lexer (short for lexical analyzer) does something similar for code.
 
@@ -109,7 +107,7 @@ Imagine you're reading a book. As you read, you naturally break down the text in
   - }
   
 
-# Does semi-colon necessary in go?
+## Does semi-colon necessary in go?
 
 In Go, semicolons (;) are technically necessary to terminate statements, but the Go compiler inserts them automatically at the end of each line during the compilation process. This means you typically don't need to write semicolons yourself except in a few specific cases.
 
@@ -125,12 +123,12 @@ If a line ends with a token that could legally end a statement (such as an ident
   
 ![For Loop](/01hello/image-6.png)
 
-# Variable
+## Variable
 
 - The default value of any vairable is 0. There is no garbage value. For string, it's ""(empty string).
 
 
-## Numeric Types
+### Numeric Types
 
 - uint8       the set of all unsigned  8-bit integers (0 to 255)
 - uint16      the set of all unsigned 16-bit integers (0 to 65535)
@@ -177,7 +175,7 @@ Walrus operator(:=) can only be used inside a method and not for a global variab
 
 If your variable has first letter as capital, it is treated as public varible. eg. const LoginToken string = "jbsafkjbjsfs"
 
-# comma OK
+## comma OK
 
 - There’s no Try Catch block in Go.
 - It’s used in 4 different scenarios:
@@ -187,18 +185,18 @@ If your variable has first letter as capital, it is treated as public varible. e
   - Testing if a channel is closed
   
 
-# Input
+## Input
 
 - You can search for any package on pkg.go.dev
 
 
-### Packages
+## Packages
 
 - bufio - This package is used for taking input.
 - os - This package is used to deal with programming related to reading and writing files.
 
 
-# Conversion
+## Conversion
 
 ### strconv
 
@@ -226,7 +224,7 @@ If your variable has first letter as capital, it is treated as public varible. e
 
 
 
-# Build
+## Build
 
 - You can build executables for Linux, Windows and Mac using golang. The command is - **go build**
 - Go searches "GOOS" environment variable, suppose GOOS="darwin", then it will build executables for Mac. 
@@ -236,7 +234,7 @@ If your variable has first letter as capital, it is treated as public varible. e
 - If you want to build executables for linux, you can run command - **GOOS="linux" go build**
 
 
-# Time
+## Time
 
 
 ### Formatting Time
@@ -262,3 +260,129 @@ If your variable has first letter as capital, it is treated as public varible. e
 ### Date
 
 - In date, month is written in the form of time.\<name of month\>. e.g. time.November
+
+## Memory Management
+
+- As programs run they write objects to memory. At some point these objects should be removed when they’re not needed anymore. This process is called memory management.
+- Memory allocation and Deallocation happens automatically
+
+
+### new()
+
+- Allocates Memory: When you use new(), you reserve space in memory for a variable.
+- Does Not Initialize: The reserved space is filled with zero values (default values) for the type, but you haven’t set it to any specific value.
+
+- Example
+  - Imagine you are reserving a parking spot:
+    - Reserve the spot: p := new(int) (You have a parking spot reserved for an integer).
+    - Spot is empty: The spot is reserved, but no car is parked in it yet (it's just an empty spot).
+    - Zeroed Storage: The spot is ready to hold a car (it’s clean and empty).
+  
+
+### make()
+  
+- Allocates Memory: When you use make(), you reserve space in memory for a specific type of data structure (slices, maps, or channels).
+- Initializes it: The reserved space is also prepared with an initial setup (like setting up a parking lot with specific spots for cars).
+
+- Example of make()
+    - Imagine you are setting up a parking lot:
+      - Reserve and set up spots: s := make([]int, 10) (You have a parking lot with 10 spots for integers).
+      - Each spot is ready: Each spot is reserved and ready to park cars in it (it’s clean and set up to hold cars).
+
+
+
+### What does this mean -  "You can allocate memory but not initialize it"?
+
+- Think of allocating memory as reserving a space in your computer’s memory (like reserving a parking spot). When you allocate memory, you’re saying, "I need this much space for my data."
+
+- Initializing memory means putting actual values into the reserved space (like parking a car in the reserved spot). When you initialize memory, you’re saying, "Here’s the data that will fill this space."
+new() Function in Go
+
+
+## GOGC Variable
+
+The GOGC variable sets the initial garbage collection target percentage. A collection is triggered when the ratio of freshly allocated data to live data remaining after the previous collection reaches this percentage. The default is GOGC=100. Setting GOGC=off disables the garbage collector entirely. 
+
+
+## Pointers
+
+- A pointer is a variable that stores the memory address of another variable. 
+- When you want to pass on actual value to avoid copying of a varible, use pointer.  
+
+### Why Use Pointers?
+Pointers are useful because they allow you to:
+
+- Directly modify a variable: By pointing to a variable's address, you can change its value directly.
+- Pass large structures efficiently: Passing a pointer is more efficient than passing large data structures because you only pass the address rather than copying the entire structure.
+
+### Key Points
+- Example
+  - var a int = 42
+  - var p *int = &a
+- Pointer Declaration: var p *int means p is a pointer to an int OR p will be storing an integer value.
+- Getting Address: &a gets the memory address of a.
+- **& means referencing.**
+- Dereferencing: *p accesses the value at the address p
+- Default value of a pointer is **<nil>**
+
+
+### So pointer refers to an address of another variable or it refers to the value of a variable accessing by its address?
+
+- A pointer itself refers to the address of another variable, but you can use that address to access or modify the value stored at that address.
+- When you create a pointer, it holds the memory address of another variable.
+- To access or modify the value at the address the pointer is pointing to, you dereference the pointer using the * operator.
+- Summary
+  - Pointer: Refers to the address of a variable.
+  - Dereferencing: Accesses or modifies the value at that address.
+
+
+## Array
+
+### len()
+
+hen you declare an array with a specific size, the length of the array is fixed and does not depend on the number of values you initially provide. The len() function will always return the size of the array as declared.
+
+
+## Slices
+
+- A slice is a dynamically-sized. Unlike arrays, slices can grow and shrink, making them more versatile.
+
+### Range
+
+- Range are not inclusive in golang.
+- Example fruitList[1:3], This will append the fruitList elements from 1st position(index 1) to 2nd position( index 2).
+
+### Creating Slices
+You can create slices in several ways:
+
+- From an Array:
+
+  - var arr = [5]int{1, 2, 3, 4, 5}
+  - var slice []int = arr[1:4] // Creates a slice from elements 1 to 3 (index 1 to 3, not including 4)
+  - fmt.Println(slice) // Output: [2 3 4]
+
+
+- Using make:
+
+  - slice := make([]int, 3) // Creates a slice of length 3, initialized with zero values
+  - fmt.Println(slice) // Output: [0 0 0]
+  - If you want to add more items, you can use append() method. **If you use slice[4]=431, it will raise an error!**
+
+
+- Slice Literals:
+
+  - slice := []int{1, 2, 3} // Creates a slice with initial values
+  - fmt.Println(slice) // Output: [1 2 3]
+
+
+### Length and Capacity
+- Length (len): Number of elements in the slice.
+- Capacity (cap): Number of elements in the underlying array, starting from the first element in the slice.
+
+
+
+### Append Method
+- This method is used for adding elements to the slices and can also be used in removing an element
+
+
+
