@@ -1,0 +1,13 @@
+# go.sum
+
+- The go.sum file in Go is used alongside the go.mod file to ensure the integrity and reproducibility of your project's dependencies.
+- When you first add a dependency (e.g., by running go get), Go records the version of the module in the go.mod file and the checksum of that version in the go.sum file.
+- If someone else clones your project and runs go build, go test, or go mod tidy, Go will check the go.sum file to ensure the integrity of the dependencies being downloaded.
+- Example of go.sum file - 
+  
+  ![go.sum](image-1.png)
+- Each line contains:
+    - The module path and version.
+    - A hash type (h1) and the checksum.
+- You don’t need to manually edit the go.sum file.It’s automatically generated and updated by Go commands like go mod tidy, go get, go build, and go test.
+  

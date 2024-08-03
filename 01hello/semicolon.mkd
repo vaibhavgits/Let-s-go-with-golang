@@ -1,0 +1,16 @@
+# Does semi-colon necessary in go?
+
+In Go, semicolons (;) are technically necessary to terminate statements, but the Go compiler inserts them automatically at the end of each line during the compilation process. This means you typically don't need to write semicolons yourself except in a few specific cases.
+
+If a line ends with a token that could legally end a statement (such as an identifier, a literal, or a keyword like break or return), the compiler inserts a semicolon at the end of the line.
+
+## When to Use Semicolons Explicitly
+
+- Multiple Statements on One Line: If you want to place multiple statements on a single line, you need to separate them with semicolons.
+
+![Multi line statment](image-5.png)
+  
+- For Loop Initialization and Post Statements: In for loops, semicolons are required to separate the initialization, condition, and post statements.
+  
+![For Loop](image-6.png)
+

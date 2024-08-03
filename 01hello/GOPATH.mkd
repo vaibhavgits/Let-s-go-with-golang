@@ -1,0 +1,33 @@
+# GOPATH & Go Modules
+
+## GOPATH
+
+- GOPATH is an environment variable that specifies the location of your workspace, where your Go code, dependencies, and binaries are stored.
+- Example Structure
+  
+  ![GOPATH Structure](image-2.png)
+  
+    src:
+    - Contains the source code of Go projects.
+    - Each project resides in its own directory under src.
+    
+    pkg:
+    - Contains compiled package objects, organized by operating system and architecture.
+    - This helps in speeding up the build process by reusing compiled packages.
+
+    bin:
+    - Contains compiled binaries (executables).
+    - When you run go install, the binaries are placed here.
+  
+
+
+## Transition to Go Modules
+
+- Project Location - With Go modules, your projects no longer need to be located within the GOPATH/src directory. You can create and work on Go projects anywhere on your filesystem.
+- Go modules manage dependencies on a per-project basis using go.mod and go.sum files.This eliminates the need for a centralized GOPATH/pkg directory for dependency management.
+- Each project can have its own set of dependencies, versions, and configurations, independent of other projects.
+- Example Structure
+  
+  ![Go Module Structure](image-3.png)
+
+- GOPATH still serves as a default module cache location and supports backward compatibility, but its role in Go development has been greatly minimized. 

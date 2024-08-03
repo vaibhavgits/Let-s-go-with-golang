@@ -1,0 +1,15 @@
+# go mod init
+
+The go.mod file in Go serves a similar purpose to the requirements.txt file in Python, but there are some differences in how they work and what they contain.
+
+1. Dependency Versioning: Go modules help you specify and use specific versions of dependencies, avoiding issues with 2. incompatible or breaking changes.
+2. Consistency: Ensures that anyone building your project uses the same versions of dependencies.
+3. Isolation: Allows you to work with multiple projects with different dependency versions without conflicts.
+4. This file is more structured and includes not only the list of dependencies but also metadata about the module, such as the module path and the version of Go being used. It looks like this:
+   
+    ![go mod 1](image.png)
+
+5. It maintains a go.sum file alongside go.mod to ensure exact versions and integrity of the dependencies.
+6. You can automatically update and clean up dependencies using commands like go get and go mod tidy.
+7. Example - go mod init example.com/greetings
+   

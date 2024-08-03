@@ -1,0 +1,9 @@
+# Golang - Introduction
+
+Golang, also known as Go, is an open-source programming language created by Google.
+
+- Case Sensitive - Go is a case-sensitive language. This means that the language distinguishes between uppercase and lowercase letters in identifiers such as variable names, function names, and type names. In Go, foo, Foo, and FOO would be considered three different identifiers.
+- Garbage Collection: Go includes a garbage collector that helps manage memory automatically, reducing the complexity of manual memory management.
+- Cross-Platform - Go is designed to be cross-platform, allowing developers to write code on one operating system and compile it to run on various other operating systems with minimal changes.
+- Compiled Lang - Go is a compiled language. This means that Go source code is translated into machine code by a compiler before it is executed.
+- Statically typed - Go is a statically typed language. This means that the type of a variable is known at compile time, and type checking is performed during compilation. In contrast, dynamically typed languages perform type checking at runtime.

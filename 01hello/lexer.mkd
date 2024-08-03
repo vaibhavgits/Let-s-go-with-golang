@@ -1,0 +1,29 @@
+# Lexer
+
+Imagine you're reading a book. As you read, you naturally break down the text into words and sentences. You recognize where one word ends and another begins, and you understand the structure of the sentences. A lexer (short for lexical analyzer) does something similar for code.
+
+- a lexer breaks down a program's source code into smaller pieces called tokens. Tokens are the building blocks of the code, such as keywords (like if, for), identifiers (variable names), operators (+, -), and symbols ({,}).
+- The lexer reads the raw source code (which is just a long string of characters) and identifies meaningful units (tokens). This process is called lexical analysis.
+- After the lexer breaks the code into tokens, it passes these tokens to the next stage called the parser. The parser then uses these tokens to understand the structure of the code and to check if it follows the language's grammar rules.
+- Example
+  
+  ![Lexer Example](image-4.png)
+
+  When a lexer processes this code, it breaks it down into tokens like:
+
+  - package
+  - main
+  - import
+  - "fmt"
+  - func
+  - main
+  - (
+  - )
+  - {
+  - fmt
+  - .
+  - Println
+  - (
+  - "Hello, World!"
+  - )
+  - }
