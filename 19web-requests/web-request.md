@@ -48,6 +48,9 @@ Simple Explanation
 
 ### Examples
    ![Sending Requst](image.png)
+
    ![Ensure Cleanup](image-1.png)
+
    ![Read the Response](image-2.png)
+   
    ![Print the Response](image-3.png)
